@@ -1,0 +1,3 @@
+--markup markdown
+--title "SES Note Replacement Documentation"
+lib/**/*.rb
