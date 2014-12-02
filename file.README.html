@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: README
+  
+    &mdash; SES Note Replacement Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!file.README.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'>
+<h1 id="label-Note+Replacement+v2.0+by+Solistra">Note Replacement v2.0 by Solistra</h1>
+
+<h2 id="label-Summary">Summary</h2>
+
+<p>This is a simple script that allows you to replace any text that you define
+with another set of text in any note box. You may use strings, symbols, or
+even regular expressions as tags, then define the text that replaces them
+with a string or a block of Ruby code that returns a string (for the truly
+insane). If you need to access the original state of the note box before
+replacements are done, you can call the <code>original_note</code> method
+on the object.</p>
+
+<p>By default, this works with maps, actors, classes, skills, items, weapons,
+armors, enemies, states, and tilesets – basically, anything with notes.</p>
+
+<h2 id="label-Caveats">Caveats</h2>
+
+<p><strong>NOTE:</strong> This warning only applies to <em>dynamically</em>
+generated note tags – simple replacements work exactly as intended as long
+as you follow the given installation instructions. Your replacements are
+going to work absolutely fine as long as you are not using a Proc object to
+generate them.</p>
+
+<p>Generally, script authors assume that note tag information will remain
+static – notes are defined in the database, and the database is where
+static game information is stored. Unfortunately, this means that most
+scripts will actually <em>cache</em> note tag information instead of
+actually collecting the note from the object when it is needed. As such, if
+the script is using a cache of note tags, it will <em>never</em> be aware
+that the note has been replaced if you dynamically generate note tag
+contents.</p>
+
+<p><strong>This is not a failing of the note replacer.</strong> It&#39;s a bad
+assumption that note tag information will not change, and therefore has no
+need to be checked after the initial loading of the game. There is nothing
+that this script can do to change that.</p>
+
+<h2 id="label-License">License</h2>
+
+<p>This script is made available under the terms of the MIT Expat license.
+View <a href="http://sesvxace.wordpress.com/license/">this page</a> for
+more detailed information.</p>
+
+<h2 id="label-Installation">Installation</h2>
+
+<p>Place this script below Materials, but above Main. Place this script below
+the SES Core (v2.0 or higher) script if you are using it. For maximum
+compatibility, place this script as high in your script list as possible.</p>
+</div></div>
+
+    <div id="footer">
+  Generated on Fri Jul 11 18:00:56 2014 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.4 (ruby-2.1.2).
+</div>
+
+  </body>
+</html>
