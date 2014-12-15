@@ -29,7 +29,7 @@
 # note tags, it will *never* be aware that the note has been replaced if you 
 # dynamically generate note tag contents.
 # 
-#   **This is not a failing of the note replacer.** It's a bad assumption that
+#   **This is not a failing of the note replacer.** It's an assumption that
 # note tag information will not change, and therefore has no need to be checked
 # after the initial loading of the game. There is nothing that this script can
 # do to change that.
